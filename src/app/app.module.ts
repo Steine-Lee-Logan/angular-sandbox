@@ -1,20 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { ServersComponent } from './servers/servers.component';
+import { ServerComponent } from './server/server.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ServersComponent,
+    ServerComponent
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ],
+  exports: [
+
+  ] 
 })
 export class AppModule { }

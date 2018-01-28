@@ -1,0 +1,11 @@
+.server-status {
+    font-weight: bolder;
+
+    &.offline {
+        color: red;
+    }
+
+    &.online {
+        color: green;
+    }
+}

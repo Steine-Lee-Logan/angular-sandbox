@@ -1,0 +1,18 @@
+  
+  <h1>
+    Servers list below
+  </h1>  
+
+  <button type="button" [disabled]="!allowNewServer" class="btn btn-outline-primary" (click)="addServer($event)">
+    Add server
+  </button>
+  
+  <div class="alert-info">{{ serverCreationStatus }}</div>
+  
+  <hr>
+  
+  <label for="server-name">Enter name of the server which you want to create</label>
+  <input type="text" name="" id="server-name" (input)="onUpdateServerName($event)" [(ngModel)]="serverName" class="form-control">
+
+  <app-server *ngFor="let server of servers; let i=index"></app-server>
+
